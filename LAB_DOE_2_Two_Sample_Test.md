@@ -20,7 +20,7 @@ So we will have two samples, before and after.
 Ho: The student  have the same reaction time before an after the spining process
 Ha: No, they do not
 
-### Choose a statistical test and make it with R
+### 2) Choose a statistical test and make it with R
 We will use the 2 sample paired t test
 
 See LAB_DOE_2_Problem_1.R to resolve this problem
@@ -28,26 +28,24 @@ See LAB_DOE_2_Problem_1.R to resolve this problem
 
 On R follow this steps
 
-<img width="375" height="90" alt="imagen" src="https://github.com/user-attachments/assets/c4f8f275-6003-4bf8-bbc0-65661e8b31ff" />
-
-To execute the script use:
-source("LAB_DOE_1_Problem_1.R")
-
-To show Z use:
-Z
-
-To show the p-value use:
-p_value
-
-<img width="171" height="106" alt="imagen" src="https://github.com/user-attachments/assets/6dcb2937-ee70-451e-901a-a8e7892480ba" />
+Change the data of the samples, in the script
 
 
-The p-value is 0.094. So p_value is more than our alpha of 0.05. We do not reject the Ho. 
-In other words the Capacitors the store have a nominal value of 650 uF.
+
+To execute the script use, in the R console:
+source("LAB_DOE_2_Problem_1.R")
+
+<img width="633" height="235" alt="imagen" src="https://github.com/user-attachments/assets/e5aeebeb-ffad-488d-97cb-488964f171ee" />
+
+
+If the p-value is less than 0.05. We reject the Ho. 
+In other words there is a diference in the time reaction between before and after the spining process
+Else the p-value is more than 0.05. We do not reject the Ho. 
+In other words there is not a diference in the time reaction between before and after the spining process
 
 #### 3) Make conclusions and recomendations
 
-Se puede decir con un 95% de confianza que los capacitores de la tienda tienen un valor nominal de 650 uF
+Se puede decir con un 95% de confianza que los estudiantes cambian/ no cambian su tiempo de reacción entre antes y despues del proceso de spinning
 
 ## Problem 2: 1 Sample t test
 
