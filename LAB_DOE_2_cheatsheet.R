@@ -54,6 +54,9 @@ t.test(x1, y1, paired = TRUE, alternative = "greater")
 t.test(x1, y1, paired = TRUE, alternative = "less")
 
 
-#     no permitidas en pruebas pareadas
+# Para cambiar el intervalo de confianza se usa
+
+# Prueba t con 99% de confianza (en lugar de 95%)
+t.test(x, y, conf.level = 0.99)
 
 ############################################################
