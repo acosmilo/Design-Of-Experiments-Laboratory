@@ -1,7 +1,7 @@
 # LAB 1 Introduction
 
 
-## Problem 1 
+## Problem 1: 1 Sample Z test
 First, in a groups of 3 people. Imagine you are going to buy a batch of 1000 capacitors for a electronic project, with the value of 650 uF. 
 At the store the buyer say that his capacitors are perfect, they have a nominal value of 650 uF with a tolerance of +-25 uF, 
 but you are not sure about his words, so you are going to make a Hypothesis test with a sample of 10 capacitors. So you made the follow measurements
