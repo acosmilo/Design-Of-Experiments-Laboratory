@@ -4,6 +4,6 @@ mu0 <- 650
 sigma <- 25
 n <- length(x)
 Z <- (mean(x) - mu0) / (sigma / sqrt(n))
-p_value <- 2 * (1 - pnorm(abs(z)))
+p_value <- 2 * (1 - pnorm(abs(Z)))
 Z
 p_value
