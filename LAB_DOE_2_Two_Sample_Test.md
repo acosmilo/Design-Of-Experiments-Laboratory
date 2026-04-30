@@ -1,30 +1,30 @@
-# LAB 2 Two Sample Test
+# LAB 2: Lecture
 
 
-## Problem 2: 2 Sample Z test
-First, in a groups of 2 or 3 people.
+## Problem 2: Paired t-test
+Each student are going to make the reaction test twice. First time in a normal state, second time after spining in thier own axis 10 times.
+So we will have two samples, before and after.
 
 
 ### Activities
 
 1) Write de Ho and Ha
-2) Choose a statistical test and make it with R
-3) Make conclusions and recomendations
+2) Gather data
+3) Choose a statistical test and make it with R
+4) Make conclusions and recomendations
 
 ### Process
 
 #### 1) Write de Ho and Ha
 
-Ho: Capacitors of the store have a nominal value of 650 uF
+Ho: The student  have the same reaction time before an after the spining process
 Ha: No, they do not
 
 ### Choose a statistical test and make it with R
-We will use the 1 sample Z test
+We will use the 2 sample paired t test
 
-See LAB_DOE_1_Problem_1.R to resolve this problem
-Use the data file LAB_DOE_1_Data_Set_1.csv
+See LAB_DOE_2_Problem_1.R to resolve this problem
 
-You need to have this documents on the same directory
 
 On R follow this steps
 
