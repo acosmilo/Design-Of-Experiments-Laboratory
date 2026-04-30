@@ -1,4 +1,4 @@
-# LAB 1 Introduction
+# LAB 1 Lecture 1
 
 
 ## Problem 1: 1 Sample Z test
