@@ -61,3 +61,19 @@ In other words the Capacitors the store have a nominal value of 650 uF.
 #### 3) Make conclusions and recomendations
 
 Se puede decir con un 95% de confianza que los capacitores de la tienda tienen un valor nominal de 650 uF
+
+## Problem 2: 1 Sample t test
+
+Clic on this link to make 5 or more experimental run test
+https://www.arealme.com/reaction-test/es/
+
+We will use the 1 sample Z test
+
+See LAB_DOE_1_Problem_2.R to resolve this problem
+Con media de un ciudadano com[un
+<img width="617" height="337" alt="imagen" src="https://github.com/user-attachments/assets/964eb181-3490-4e30-b924-62525b18c375" />
+
+Con media de u piloto de F1
+
+<img width="548" height="247" alt="imagen" src="https://github.com/user-attachments/assets/93f623a9-2238-4180-94ed-d1f6524004ca" />
+
