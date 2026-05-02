@@ -25,6 +25,32 @@ design_randomized$Run <- 1:nrow(design_randomized)
 print(design_randomized)
 write_xlsx(design_randomized, "LAB_DOE_5_Problem_1.xlsx")
 
+############################################################
+# NOMBRE BASE AUTOMÁTICO
+############################################################
+
+base_name <- "LAB_DOE_5"
+
+############################################################
+# Aleatorización
+############################################################
+
+png(paste0(base_name, "_0_Design_Randomized.png"),
+    width = 300, height = 500, res = 100)
+
+plot.new()
+
+design_randomized_txt <- capture.output(design_randomized)
+
+text(0, 1,
+     paste("Design_Randomized\n\n", paste(design_randomized_txt, collapse = "\n")),
+     adj = c(0,1),
+     family = "mono",
+     cex = 0.8)
+
+dev.off()
+
+
 # - sample() randomly permutes the runs
 # - set.seed() ensures you get the same randomization again
 # - "Run" is the execution order after randomization
