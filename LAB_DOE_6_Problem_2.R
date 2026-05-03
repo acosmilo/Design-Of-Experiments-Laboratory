@@ -1,4 +1,8 @@
+#IMPORTAR libreria
+
 library(readxl)
+
+#Leer los datos
 
 datos <- read_excel("LAB_DOE_6_Problem_1.xlsx")
 

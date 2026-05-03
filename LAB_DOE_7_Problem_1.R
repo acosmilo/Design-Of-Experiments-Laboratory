@@ -1,40 +1,37 @@
 ############################################################
-# RANDOMIZATION OF A FACTORIAL EXPERIMENT WITH BLOCKS
-# 5 treatments (A–E), 6 replicates each = 30 runs
-# Structured into blocks with within-block randomization
+# RANDOMIZATION OF A RCBD (RANDOMIZED COMPLETE BLOCK DESIGN)
+# 4 treatments (A–D), 2 blocks, 5 replicates por combinación
 ############################################################
 
-
-#Importaciones
+# Importaciones
 library(writexl)
-
 
 ########################
 # 1. DEFINE FACTOR LEVELS
 ########################
 
-levels <- c("A", "B", "C", "D", "E")
-replicates <- 6
-
-treatment <- rep(levels, each = replicates)
+levels <- c("A", "B", "C", "D")
+blocks <- c("Block1", "Block2")
+replicates <- 5
 
 ########################
-# 2. DEFINE BLOCK STRUCTURE
+# 2. CREATE RCBD STRUCTURE (COMPLETO)
 ########################
-# Example: 3 blocks, each with 10 runs (balanced design)
 
-blocks <- rep(c("Block1", "Block2", "Block3"), each = 10)
-
-design <- data.frame(
-  Block = blocks,
-  Treatment = treatment
+# Todas las combinaciones Treatment × Block
+design <- expand.grid(
+  Treatment = levels,
+  Block = blocks
 )
+
+# Replicaciones por combinación
+design <- design[rep(1:nrow(design), each = replicates), ]
 
 ########################
 # 3. RANDOMIZATION WITHIN EACH BLOCK
 ########################
 
-#set.seed(123)  # reproducibility
+#set.seed(123)  # opcional
 
 design_randomized <- do.call(rbind,
   lapply(split(design, design$Block), function(df) {
@@ -42,7 +39,7 @@ design_randomized <- do.call(rbind,
   })
 )
 
-# Reassign global run order after blocking randomization
+# Reordenar corridas
 design_randomized$Run <- 1:nrow(design_randomized)
 
 ########################
@@ -51,20 +48,20 @@ design_randomized$Run <- 1:nrow(design_randomized)
 
 design_randomized
 
-
-write_xlsx(design_randomized, "LAB_DOE_6_Problem_1.xlsx")
-
-# NOMBRE BASE AUTOMÁTICO
-############################################################
-
-base_name <- "LAB_DOE_6"
+write_xlsx(design_randomized, "LAB_DOE_7_Problem_1.xlsx")
 
 ############################################################
-# Aleatorización
+# NOMBRE BASE
+############################################################
+
+base_name <- "LAB_DOE_7"
+
+############################################################
+# VISUALIZACIÓN
 ############################################################
 
 png(paste0(base_name, "_0_Design_Randomized.png"),
-    width = 400, height = 700, res = 100)
+    width = 400, height = 700, res = 80)
 
 plot.new()
 
@@ -77,13 +74,10 @@ text(0, 1,
      cex = 0.8)
 
 dev.off()
-
-
-
 ############################################################
 # NOTES
 ############################################################
-# - Randomization is restricted within each block
-# - Each block gets its own independent shuffle
-# - This preserves block structure while avoiding bias
+# - Cada tratamiento aparece en cada bloque (RCBD válido)
+# - Se controla la variabilidad entre bloques
+# - Permite estimar efectos de Treatment y Block
 ############################################################
